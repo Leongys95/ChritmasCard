@@ -1,0 +1,53 @@
+html,
+body {
+    min-height: 100%;
+    min-width: 100%;
+    background: linear-gradient(to right, #dc2424, #4a569d);
+}
+
+.card,
+.front,
+.back {
+    min-height: 80vh;
+}
+
+.card {
+    width: 50%;
+    position: relative;
+    box-shadow: 3px 3px 3px lightslategray;
+}
+
+#front-cover {
+    box-shadow: 3px 3px 3px gray;
+}
+
+.front {
+    z-index: 10;
+    background: linear-gradient(to right bottom, #dae2f8, #d6a4a4);
+    transition: transform 1s linear;
+    transform-origin: top left;
+    transform-style: preserve-3d;
+    position: absolute;
+    height: 100%;
+    width: 100%;
+}
+
+.open {
+    transform: rotateY(90deg);
+}
+
+@media screen and (max-width: 1028px) {
+    .card {
+        width: 75%;
+    }
+}
+
+@media screen and (max-width: 768px) {
+    .card {
+        width: 100%;
+    }
+
+    .back {
+        font-size: 12px;
+    }
+}
